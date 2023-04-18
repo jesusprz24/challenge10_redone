@@ -1,4 +1,4 @@
-class Employee {
+/*class Employee {
 
     //Employee is the parent class which all other classes will inherit from
   //setup all the basic items all employees will have
@@ -35,4 +35,33 @@ class Employee {
 }
 // the class must be exported to use it in other code files
 // this is an older way of expoerting a class javascript has updated to a newer es6 style
+module.exports = Employee;*/
+
+const Employee = require('./Employee');
+
+class Employee {
+  constructor(name, id, email) {
+    this.name = name;
+    this.id = id;
+    this.email = email;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  getId() {
+    return this.id;
+  }
+
+  getEmail() {
+    return this.email;
+  }
+
+  getRole() {
+    return "Employee";
+  }
+}
+
 module.exports = Employee;
+
