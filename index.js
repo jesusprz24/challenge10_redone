@@ -19,7 +19,6 @@ console.log(
 function startTheApp() {
 
   function createManager() {
-		//start createManager() asks inquirer questions and saves the answers to a teamMembers Array
 		inquirer
 			.prompt([
 				{
@@ -42,9 +41,6 @@ function startTheApp() {
 					officeNumber: '120',
 					message: "What is the managers office number?",
 				},
-				//Manager question 2 here
-				//Manager question 3 here
-				//Manager question 4 here
 			])
 			.then((answers) => {
 				const manager = new Manager(
@@ -105,10 +101,6 @@ function startTheApp() {
 					github: 'coolguy@github',
 					message: "What is your Engineer Github?",
 				},
-				//Engineer question 2 here
-				//Engineer question 3 here
-				//Engineer question 4 here
-				//end engineer questions
 			])
 			.then((answers) => {
 				const engineer = new Engineer(
@@ -118,7 +110,7 @@ function startTheApp() {
 					answers.engineerGithub,
 				);
 				teamMembers.push(engineer);
-				askMoreTeamQuestions(); //back to line 76
+				askMoreTeamQuestions();
 			});
 	}
 
@@ -145,16 +137,11 @@ function startTheApp() {
 					school: 'undergrad',
 					message: "What is your schools name?",
 				},
-				//Intern question 2 here
-				//Intern question 3 here
-				//Intern question 4 here
-
-				//end Intern questions
 			])
 			.then((answers) => {
 				const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
 				teamMembers.push(intern);
-				askMoreTeamQuestions(); //back to line 76
+				askMoreTeamQuestions();
 			});
 	}
 

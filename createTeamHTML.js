@@ -1,12 +1,5 @@
-// create the team
-//this is a functional expression
-// this code first runs line 122, then line 6. Going into the function. Inside the outputTeam function line 63 runs first. The code below that runs next and calls the inner functions outputManager, outputEngineer, outputIntern. After all that is finished it returns all the html to index.js and writes the html file to disk.
-
-// the function is read into memory but it does not run
-// line 122 calls this function
 const outputTeam = team => {
 
-    // create the manager html
     const outputManager = manager => {
         return `
         <div class="card employee-card">
@@ -25,7 +18,6 @@ const outputTeam = team => {
         `;
     };
 
-    // create the html for engineers
     const outputEngineer = engineer => {
         return `
         <div class="card employee-card">
@@ -44,7 +36,6 @@ const outputTeam = team => {
         `;
     };
 
-    // create the html for interns
     const outputIntern = intern => {
         return `
         <div class="card employee-card">
@@ -62,15 +53,8 @@ const outputTeam = team => {
 </div>
         `;
     };
-// this code is runs second
+
     const html = [];
-// empty html array gets the whole team pushed to it (used to be called teamMembers Array in index.js file)
-    // a filtered teamMembers Array which only has managers (There can be only one) is passed into the outputManager(manager) function
-//.map produces a new array so html array remain unmodified
-    //same thing happens a second time for the Engineers
-    //then the Interns
-    // the .join("") returns a new string of data from the array
-    // we need the array to be a string and the join("") takes away all the commas in Arrays
     html.push(team
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => outputManager(manager))
@@ -85,14 +69,10 @@ const outputTeam = team => {
         .map(intern => outputIntern(intern))
         .join("")
     );
-//one more join to make all the html Array into one giant string of html code
-    //returns the html string of code to the team parameter
     return html.join("");
 
 }
-// code runs first
-// team is exported after it get put in the code below
-// this is what calls the outputTeam function(team) with a parameter team.
+
 module.exports = team => {
 
     return `
