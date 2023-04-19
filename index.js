@@ -23,31 +23,31 @@ function startTheApp() {
 			.prompt([
 				{
 					type: 'input',
-					name: 'Darth Vader',
+					name: 'name',
 					message: "What is the team manager's name?",
 				},
 				{
 					type: 'input',
-					id: '1',
+					name: 'id',
 					message: "What is the managers office numbers?",
 				},
 				{
 					type: 'input',
-					email: 'realfather@email.com',
+					name: 'email',
 					message: "What is the managers Email?",
 				},
 				{
 					type: 'input',
-					officeNumber: '120',
+					name: 'officeNumber',
 					message: "What is the managers office number?",
 				},
 			])
 			.then((answers) => {
 				const manager = new Manager(
-					answers.managerName,
-					answers.managerId,
-					answers.managerEmail,
-					answers.managerOfficeNumber,
+					answers.name,
+					answers.id,
+					answers.email,
+					answers.officeNumber,
 				);
 				teamMembers.push(manager);
 				askMoreTeamQuestions();
@@ -83,31 +83,31 @@ function startTheApp() {
 			.prompt([
 				{
 					type: 'input',
-					name: 'Han Solo',
+					name: 'name',
 					message: "What is your engineer's name?",
 				},
 				{
 					type: 'input',
-					id: '2',
+					name: 'id',
 					message: "What is your engineer's name?",
 				},
 				{
 					type: 'input',
-					email: 'coolguy@email.com',
+					name: 'email',
 					message: "What the email of your intern?",
 				},
 				{
 					type: 'input',
-					github: 'coolguy@github',
+					name: 'github',
 					message: "What is your Engineer Github?",
 				},
 			])
 			.then((answers) => {
 				const engineer = new Engineer(
-					answers.engineerName,
-					answers.engineerId,
-					answers.engineerEmail,
-					answers.engineerGithub,
+					answers.name,
+					answers.id,
+					answers.email,
+					answers.github,
 				);
 				teamMembers.push(engineer);
 				askMoreTeamQuestions();
@@ -119,27 +119,27 @@ function startTheApp() {
 			.prompt([
 				{
 					type: 'input',
-					name: 'Yoda',
+					name: 'name',
 					message: "What is your intern's name?",
 				},
 				{
 					type: 'input',
-					id: '3',
+					name: 'id',
 					message: "What is your Intern id?",
 				},
 				{
 					type: 'input',
-					email: 'yoda@gmail.com',
+					name: 'email',
 					message: "What is your intern's email?",
 				},
 				{
 					type: 'input',
-					school: 'undergrad',
+					name: 'school',
 					message: "What is your schools name?",
 				},
 			])
 			.then((answers) => {
-				const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+				const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
 				teamMembers.push(intern);
 				askMoreTeamQuestions();
 			});
