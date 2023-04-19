@@ -28,7 +28,7 @@ function startTheApp() {
 					type: 'input',
 					//CHANGE THIS NAME but remember to change it everywhere in the code
 					//this name exactly matches the name we use in .then(answers)
-					name: 'managerName',
+					name: 'Darth Vader',
 					message: "What is the team manager's name?",
 				},
 				//Manager question 2 here

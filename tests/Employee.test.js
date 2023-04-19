@@ -39,3 +39,4 @@ test("Can get email via getEmail()", () => {
 test("getRole() should return \"Employee\"", () => {
 	//add code here
 });
+

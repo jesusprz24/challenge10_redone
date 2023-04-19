@@ -11,3 +11,5 @@ test('getRole() should return "Intern"', () => {
 test('Can get school via getSchool()', () => {
 	//add code here
 });
+
+
