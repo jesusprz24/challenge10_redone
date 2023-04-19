@@ -35,6 +35,4 @@ THEN I exit the application, and the HTML is generated
 - Install inquirer (npm i inquirer@8.2.4)
 - Install jest (npm install jest)
 
-# Screenshot
-
-# Walkthrough Video:
+# Walkthrough Video: mhttps://drive.google.com/file/d/1c3VmWo897TdMlLWf8LdvdkhCXrQSzmHc/view
