@@ -1,15 +1,23 @@
 const Intern = require('../classes/Intern');
 
+const name = "Luke";
+const id = 55;
+const email = "usetheforce@email.com"
+const school = "Yoda Academy"
+const testIntern = new Intern (name, id, email, school);
+
 test('Can set school via constructor', () => {
-	//add code here
+	expect(typeof(testIntern)).toBe("object");
 });
 
 test('getRole() should return "Intern"', () => {
-	//add code here
+	const returnedRole = testIntern.getRole();
+	expect((returnedRole)).toBe("Intern");
 });
 
 test('Can get school via getSchool()', () => {
-	//add code here
+	const returnedSchool = testIntern.getSchool();
+	expect((returnedSchool)).toBe(school);
 });
 
 
