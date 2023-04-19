@@ -27,6 +27,21 @@ function startTheApp() {
 					name: 'Darth Vader',
 					message: "What is the team manager's name?",
 				},
+				{
+					type: 'input',
+					id: '1',
+					message: "What is the managers office numbers?",
+				},
+				{
+					type: 'input',
+					email: 'realfather@email.com',
+					message: "What is the managers Email?",
+				},
+				{
+					type: 'input',
+					officeNumber: '120',
+					message: "What is the managers office number?",
+				},
 				//Manager question 2 here
 				//Manager question 3 here
 				//Manager question 4 here
@@ -75,6 +90,21 @@ function startTheApp() {
 					name: 'Han Solo',
 					message: "What is your engineer's name?",
 				},
+				{
+					type: 'input',
+					id: '2',
+					message: "What is your engineer's name?",
+				},
+				{
+					type: 'input',
+					email: 'coolguy@email.com',
+					message: "What the email of your intern?",
+				},
+				{
+					type: 'input',
+					github: 'coolguy@github',
+					message: "What is your Engineer Github?",
+				},
 				//Engineer question 2 here
 				//Engineer question 3 here
 				//Engineer question 4 here
@@ -97,8 +127,23 @@ function startTheApp() {
 			.prompt([
 				{
 					type: 'input',
-					name: 'internName',
+					name: 'Yoda',
 					message: "What is your intern's name?",
+				},
+				{
+					type: 'input',
+					id: '3',
+					message: "What is your Intern id?",
+				},
+				{
+					type: 'input',
+					email: 'yoda@gmail.com',
+					message: "What is your intern's email?",
+				},
+				{
+					type: 'input',
+					school: 'undergrad',
+					message: "What is your schools name?",
 				},
 				//Intern question 2 here
 				//Intern question 3 here
