@@ -10,9 +10,6 @@ class Employee {
     this.email = email;
   }
 
-//getName is a function that does a single action it gets the name from the class
-  //same for getID() and getEmail()
-
   getName() {
     return this.name;
   }
@@ -25,15 +22,11 @@ class Employee {
     return this.email;
   }
 
-//getRole is a little different because the role of all class will be different
-  //Employee, Manager, Engineer, and Intern
-
   getRole() {
     return "Employee";
   }
 
 }
-// the class must be exported to use it in other code files
-// this is an older way of expoerting a class javascript has updated to a newer es6 style
+
 module.exports = Employee;
 
